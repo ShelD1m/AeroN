@@ -38,12 +38,12 @@ public class AirDao {
              pstmt.setString(1, icao24);
              pstmt.setString(2, country);
              pstmt.executeUpdate();
+            allAirs.add(icao24);
+            return true;
         } catch (SQLException e) {
             System.out.println(e.getMessage());
             return false;
         }
-        allAirs.add(icao24);
-        return true;
     }
 
 
